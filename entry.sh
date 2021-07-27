@@ -41,7 +41,7 @@ function execute_command {
         -o StrictHostKeyChecking=no \
         -t \
         -q \
-        "$host" "$command"
+        "$host" bash -c "'$command'"
 }
 
 # Descriptions

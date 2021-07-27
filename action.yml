@@ -15,4 +15,4 @@ runs:
     using: 'docker'
     image: dockerfile
     args:
-        ${{ inputs.command }}
+        - ${{ inputs.command }}

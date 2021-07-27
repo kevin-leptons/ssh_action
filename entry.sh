@@ -66,7 +66,7 @@ function main {
     fi
 
     if [[ -z "$command" ]]; then
-        echo "ERROR: Argument command_to_execute is empty"
+        echo "ERROR: Argument command is empty"
         exit 1
     fi
 
@@ -74,4 +74,4 @@ function main {
     execute_command "$ssh_id_file" "$host" "$command"
 }
 
-main "$1"
+main "$INPUT_COMMAND"

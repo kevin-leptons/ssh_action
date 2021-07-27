@@ -74,4 +74,4 @@ function main {
     execute_command "$ssh_id_file" "$host" "$command"
 }
 
-main "$INPUT_COMMAND"
+main "$1"

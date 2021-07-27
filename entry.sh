@@ -40,6 +40,7 @@ function execute_command {
         -o UserKnownHostsFile=/dev/null \
         -o StrictHostKeyChecking=no \
         -t \
+        -q \
         "$host" "$command"
 }
 

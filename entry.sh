@@ -15,7 +15,7 @@ function import_ssh_key {
     local ssh_id_file="$1"
     local ssh_dir=$(dirname "${ssh_id_file}")
 
-    mkdir -vp "$ssh_dir"
+    mkdir -p "$ssh_dir"
     chmod 700 "$ssh_dir"
     echo "$INPUT_KEY" > "$ssh_id_file"
     chmod 600 "$ssh_id_file"
@@ -41,7 +41,7 @@ function execute_command {
         -o StrictHostKeyChecking=no \
         -t \
         -q \
-        "$host" bash -c "'$command'"
+        "$host" "$command"
 }
 
 # Descriptions

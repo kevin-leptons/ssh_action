@@ -1,0 +1,17 @@
+name: 'kevin_leptons/ssh_action'
+description: Execute commands overat remote host by SSH
+author: Kevin Leptons
+inputs:
+    host:
+        description: URI refers to remote host like `user@host`
+        required: true
+    key:
+        description: Private SSH key to authenticate
+        required: true
+    command:
+        description: Command to execute, Bash syntax
+        required: true
+run:
+    using: 'docker'
+    image: dockerfile
+

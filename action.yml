@@ -1,5 +1,5 @@
 name: 'kevin_leptons/ssh_action'
-description: Execute commands overat remote host by SSH
+description: Execute commands at remote host by SSH
 author: Kevin Leptons
 inputs:
     host:

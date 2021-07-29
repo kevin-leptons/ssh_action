@@ -10,8 +10,8 @@
 steps:
     - uses: kevin-leptons/ssh_action@v1
       with:
-        host: ${{ secrets.HOST }}
-        key: ${{ secrets.KEY }}
+        host: ${{ secrets.REMOTE_HOST }}
+        key: ${{ secrets.REMOTE_KEY }}
         command: ls -l
 ```
 
@@ -19,5 +19,5 @@ steps:
 * key `{String}` SSH private key to authenticate with remote host. At remote
   host, public key must be add to `~/.ssh/authorized_keys`.
 * command `{String}` Command to execute, Bash syntax.
-* `secrets.HOST` and `secrets.KEY` can be setup or change from settings of
+* `secrets.REMOTE_HOST` and `secrets.REMOTE_KEY` can be setup by settings of
   Github repository.

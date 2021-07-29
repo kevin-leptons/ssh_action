@@ -16,3 +16,6 @@ runs:
     image: dockerfile
     args:
         - ${{ inputs.command }}
+branding:
+    icon: 'terminal'
+    color: 'green'
